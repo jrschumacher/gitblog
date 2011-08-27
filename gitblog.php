@@ -1038,6 +1038,7 @@ function gb_exception_handler($e) {
 set_exception_handler('gb_exception_handler');
 
 # PATH patches: macports git. todo: move to admin/setup.php
+if(!isset($_ENV['PATH'])) $_ENV['PATH'] = '/bin:/sbin:/usr/bin:/usr/sbin';
 $_ENV['PATH'] .= ':/opt/local/bin';
 
 
